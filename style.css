@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Pacifico', cursive;
+  color: #ff9bb3;
+  background: url("https://res.cloudinary.com/dxw5wzibg/image/upload/v1777053448/d59299d7e5c436cfb29ab5065e8df24f_ps6hmy.jpg") no-repeat center/cover;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* BG VIDEO */
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* overlay */
+body::after {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: -1;
+}
+
+/* screens */
+.screen {
+  display: none;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.active { display: flex; }
+
+/* heart */
+.heart {
+  font-size: 70px;
+  animation: beat 1s infinite;
+  cursor: pointer;
+}
+
+@keyframes beat {
+  50% { transform: scale(1.2); }
+}
+
+/* progress */
+.bar {
+  width: 80%;
+  height: 10px;
+  background: rgba(255,255,255,0.2);
+  margin-bottom: 20px;
+}
+
+#progress {
+  height: 100%;
+  width: 0%;
+  background: #ff9bb3;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  background: #ff9bb3;
+  color: white;
+  border-radius: 10px;
+}
+
+input[type=range] {
+  width: 80%;
+}
+
+/* popup */
+#popup {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: black;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.hide { display: none; }
+
+/* final video */
+.videoBox {
+  width: 45%;
+}
+
+.videoBox video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* text below */
+.finalText {
+  margin-top: 25px;
+}
